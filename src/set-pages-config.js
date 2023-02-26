@@ -47,9 +47,9 @@ function getConfigParserSettings({ staticSiteGenerator, generatorConfigFile, sit
         blankConfigurationFile: `${__dirname}/blank-configurations/gatsby.js`,
         properties: {
           // Configure a path prefix
-          pathPrefix: path,
+          //pathPrefix: path,
           // Configure a site url
-          'siteMetadata.siteUrl': origin
+          //'siteMetadata.siteUrl': origin
         }
       }
     case 'sveltekit':
