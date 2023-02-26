@@ -42,6 +42,18 @@ function getConfigParserSettings({ staticSiteGenerator, generatorConfigFile, sit
         }
       }
     case 'gatsby':
+
+      core.info({
+        configurationFile: generatorConfigFile || './gatsby-config.js',
+        blankConfigurationFile: `${__dirname}/blank-configurations/gatsby.js`,
+        properties: {
+          // Configure a path prefix
+          //pathPrefix: path,
+          // Configure a site url
+          //'siteMetadata.siteUrl': origin
+        }
+      })
+
       return {
         configurationFile: generatorConfigFile || './gatsby-config.js',
         blankConfigurationFile: `${__dirname}/blank-configurations/gatsby.js`,
