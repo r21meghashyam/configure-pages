@@ -16602,14 +16602,28 @@ function getConfigParserSettings({ staticSiteGenerator, generatorConfigFile, sit
         }
       }
     case 'gatsby':
+      core.info(
+        'getConfigParserSettings: ' +
+          JSON.stringify({
+            configurationFile: generatorConfigFile || './gatsby-config.js',
+            blankConfigurationFile: __nccwpck_require__.ab + "gatsby.js",
+            properties: {
+              // Configure a path prefix
+              //pathPrefix: path,
+              // Configure a site url
+              //'siteMetadata.siteUrl': origin
+            }
+          })
+      )
+
       return {
         configurationFile: generatorConfigFile || './gatsby-config.js',
         blankConfigurationFile: __nccwpck_require__.ab + "gatsby.js",
         properties: {
           // Configure a path prefix
-          pathPrefix: path,
+          //pathPrefix: path,
           // Configure a site url
-          'siteMetadata.siteUrl': origin
+          //'siteMetadata.siteUrl': origin
         }
       }
     case 'sveltekit':
